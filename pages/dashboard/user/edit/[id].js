@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export async function getServerSideProps(req) {
     const { id } = req.query;
-    const res = await fetch('https://frontend2-n8o4ivd2b-kuntapat002.vercel.app/api/users/' + id, {
+    const res = await fetch('https://frontend2-3vpvbu8k4-kuntapat002.vercel.app/api/users/' + id, {
       method: 'GET',
     })
     const posts = await res.json();
@@ -42,7 +42,7 @@ const handleUpdate = (event) => {
     // console.log("password", jsonData.password);
     // console.log("status", jsonData.status);
 
-      fetch(`https://frontend2-n8o4ivd2b-kuntapat002.vercel.app/api/users/`, {
+      fetch(`https://frontend2-3vpvbu8k4-kuntapat002.vercel.app/api/users/`, {
         method: 'PUT', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',
