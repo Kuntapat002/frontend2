@@ -8,8 +8,6 @@ const connection = mysql.createConnection({
     database: process.env.DB_DATABASE,
   });
 
-
-  
   export default function handler(req, res) {
 
     const { studentid, firstname, lastname, username, password, status} = req.body

@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import Swal from 'sweetalert2';
 
 export async function getServerSideProps() {
-  const res = await fetch('https://frontend2-4av35mb0m-kuntapat002.vercel.app/api/users');
+  const res = await fetch('https://frontend2-hfksezs4g-kuntapat002.vercel.app/api/users/');
   const posts = await res.json();
 
   return {
@@ -32,7 +32,7 @@ export default function Component({ posts }) {
   
     if (result.isConfirmed) {
       // Perform the deletion using fetch
-      await fetch('https://frontend2-4av35mb0m-kuntapat002.vercel.app/api/users?id=' + id, {
+      await fetch('https://frontend2-hfksezs4g-kuntapat002.vercel.app/api/users/' + id, {
         method: 'DELETE',
       });
   
@@ -79,7 +79,7 @@ export default function Component({ posts }) {
               <h5>Member List</h5>
             </div>
             <div className="card-body">
-              <Link href="./dashboard/adddata"><button className="btn btn-success text-n mb-2">Add Data</button></Link>
+              <Link href="./dashboard/user/add/"><button className="btn btn-success text-n mb-2">Add Data</button></Link>
 
               <table className="table table-bordered">
                 <thead>
@@ -105,7 +105,7 @@ export default function Component({ posts }) {
                       <td className="text-center">{post.password}</td>
                       <td className="text-center">{post.status}</td>
                       <td className="text-center">
-                        <Link href={`/dashboard/frmEdit?id=${post.id}`} className="btn btn-warning">
+                        <Link href={`/dashboard/user/edit/${post.id}`} className="btn btn-warning">
                             <i className="bi bi-pencil-square">Edit</i>
                           </Link>{" "}
                         <button className="btn btn-danger" onClick={() => handleDelete(post.id)}>

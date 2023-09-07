@@ -27,7 +27,7 @@ const handleSubmit = (event) => {
     // console.log("password", jsonData.password);
     // console.log("status", jsonData.status);
 
-      fetch(`https://frontend2-4av35mb0m-kuntapat002.vercel.app/api/users`, {
+      fetch(`https://frontend2-hfksezs4g-kuntapat002.vercel.app/api/users/`, {
         method: 'POST', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',
@@ -107,7 +107,7 @@ const handleSubmit = (event) => {
               <div className="mb-3">
                 <label htmlFor="status" className="form-label">Status</label>
                 <input type="text" className="form-control" name="txt_status" id="txt_status" />
-              </div>
+              </div> 
               <button type="submit" className="btn btn-success me-2">Sign up</button>
               <Link href="/dashboard"><button type="button" className="btn btn-warning">Back</button></Link>
               
