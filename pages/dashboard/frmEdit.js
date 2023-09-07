@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useSession, signIn, signOut } from "next-auth/react";
 import Link from "next/link";
 
-export async function getStaticProps(req) {
+export async function getServerSideProps(req) {
     const id = req.query;
     const res = await fetch('http://localhost:3000/api/users?id=' + id, {
       method: 'GET',
