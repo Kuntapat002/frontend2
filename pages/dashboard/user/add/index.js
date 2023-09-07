@@ -27,7 +27,7 @@ const handleSubmit = (event) => {
     // console.log("password", jsonData.password);
     // console.log("status", jsonData.status);
 
-      fetch(`https://frontend2-3vpvbu8k4-kuntapat002.vercel.app/api/users/`, {
+      fetch(`https://frontend2-snowy.vercel.app/api/users/`, {
         method: 'POST', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',
