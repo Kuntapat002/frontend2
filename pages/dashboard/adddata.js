@@ -27,7 +27,7 @@ const handleSubmit = (event) => {
     // console.log("password", jsonData.password);
     // console.log("status", jsonData.status);
 
-      fetch(`http://localhost:3000/api/users`, {
+      fetch(`https://frontend2-4av35mb0m-kuntapat002.vercel.app/api/users`, {
         method: 'POST', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',
